@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# useToggle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
+`useToggle` has a similar API to `useState` in that both return an array with the first item being the state and the second item being a way to update that state. However, unlike `useState`, `useToggle`'s state value can only ever be a boolean.
 
 ```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+const [on, setOn] = useToggle(true);
+
+setOn() // false
+setOn() // true
+setOn(false) // false
+setOn(true) // true
+setOn("state is still toggled") // false
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+For the full documentation, see [usehooks.com/usetoggle](https://usehooks.com/usetoggle).
+
+## Tasks
+- `useToggle` should correctly establish its initial value, casting it to a boolean if it's not one
+- `useToggle` should toggle the state when its updater function is invoked without a value
+- `useToggle` should set the state to the provided value when its updater function is called with a boolean value
+- `useToggle` should not change the state when its updater function is called with the same boolean value
+- `useToggle` should toggle the state when its updater function is called with a value that isn't a boolean
