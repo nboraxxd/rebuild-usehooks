@@ -1,6 +1,11 @@
 import useToggle from './useToggle'
 
-function ToggleDemo({ on, toggle }) {
+type ToggleDemoProps = {
+  on: boolean
+  toggle: () => void
+}
+
+function ToggleDemo({ on, toggle }: ToggleDemoProps) {
   return (
     <div>
       <label className="toggle">
