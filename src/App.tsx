@@ -4,7 +4,7 @@ export default function App() {
   const initialState = { name: 'Tyler' }
   const defaultState = { name: 'Ben' }
 
-  const [user, setUser] = useDefault(initialState, defaultState)
+  const [user, setUser] = useDefault<{ name: string }>(initialState, defaultState)
 
   return (
     <section>
