@@ -1,30 +1,24 @@
-# React + TypeScript + Vite
+# useCopyToClipboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
+The `useCopyToClipboard` hook provides a simple way to copy text to the user's clipboard.
 
 ```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+const [copiedText, copyToClipboard] = useCopyToClipboard();
+
+...
+
+copyToClipboard("Text to copy");
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+For the full documentation, see [usehooks.com/usecopytoclipboard](https://usehooks.com/usecopytoclipboard).
+
+## TASKS
+
+- `useCopyToClipboard` should return an array with the first item being the value that was copied and the second being a function to copy a value to the user's clipboard
+- The first item in the array that `useCopyToClipboard` returns should be the value that was copied to the clipboard
+- The second item in the array that `useCopyToClipboard` returns should copy a provided value to the user's clipboard
+- `useCopyToClipboard` should provide a fallback for the copy functionality for browsers that don't support `navigator.writeText`
+
+## THE RESULT
+
+The final version of your app should look and behave like [this](codesandbox.io/p/sandbox/usecopytoclipboard-y22r6w).
