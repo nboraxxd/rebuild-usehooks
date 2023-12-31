@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useState } from 'react'
 import usePrevious from './usePrevious'
 
 function getRandomColor() {
@@ -7,7 +7,7 @@ function getRandomColor() {
 }
 
 export default function App() {
-  const [color, setColor] = React.useState(getRandomColor())
+  const [color, setColor] = useState(getRandomColor())
   const previousColor = usePrevious(color)
 
   const handleClick = () => {
