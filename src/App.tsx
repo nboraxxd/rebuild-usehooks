@@ -1,7 +1,7 @@
 import * as React from 'react'
 import useFavicon from './useFavicon'
 
-const faviconMap = {
+const faviconMap: Record<string, string> = {
   uidotdev: 'https://ui.dev/favicon/favicon-32x32.png',
   bytes: 'https://bytes.dev/favicon/favicon-32x32.png',
   react_newsletter: 'https://reactnewsletter.com/favicon/favicon-32x32.png',
