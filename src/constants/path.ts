@@ -5,4 +5,5 @@ export const PATH = {
   useToggle: '/use-toggle',
   usePrevious: '/use-previous',
   usePreferredLanguage: '/use-preferred-language',
+  useFavicon: 'use-favicon',
 } as const

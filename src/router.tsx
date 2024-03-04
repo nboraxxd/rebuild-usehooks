@@ -8,6 +8,7 @@ import { UseDefault } from '@/page/UseDefault'
 import { UseToggle } from '@/page/UseToggle'
 import { UsePrevious } from '@/page/UsePrevious'
 import { UsePreferredLanguage } from '@/page/UsePreferredLanguage'
+import { UseFavicon } from '@/page/UseFavicon'
 
 export const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.usePreferredLanguage,
         element: <UsePreferredLanguage />,
+      },
+      {
+        path: PATH.useFavicon,
+        element: <UseFavicon />,
       },
     ],
   },
