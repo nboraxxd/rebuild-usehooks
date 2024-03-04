@@ -5,6 +5,7 @@ import { NotFound } from '@/page/NotFound'
 import { Homepage } from '@/page/Homepage'
 import { UseDocumentTitle } from '@/page/UseDocumentTitle'
 import { UseDefault } from '@/page/UseDefault'
+import { UseToggle } from '@/page/UseToggle'
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.useDefault,
         element: <UseDefault />,
+      },
+      {
+        path: PATH.useToggle,
+        element: <UseToggle />,
       },
     ],
   },
