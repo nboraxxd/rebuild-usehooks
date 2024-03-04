@@ -1,6 +1,6 @@
 import { useToggle } from '@/page/UseToggle/hooks'
 import theme from '@/theme.module.css'
-import styles from './UseDocumentTitle.module.css'
+import styles from './UseToggle.module.css'
 
 interface ToggleProps {
   on: boolean

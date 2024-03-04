@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import styles from './Homepage.module.css'
 
 export default function Homepage() {
-  const USE_HOOKS = Object.keys(PATH).slice(1)
+  const USE_HOOKS = Object.keys(PATH).slice(1) as Exclude<keyof typeof PATH, 'homepage'>[]
 
   return (
     <main className={`${styles.main}`}>

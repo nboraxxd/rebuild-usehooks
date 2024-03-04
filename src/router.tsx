@@ -6,6 +6,7 @@ import { Homepage } from '@/page/Homepage'
 import { UseDocumentTitle } from '@/page/UseDocumentTitle'
 import { UseDefault } from '@/page/UseDefault'
 import { UseToggle } from '@/page/UseToggle'
+import { UsePrevious } from './page/UsePrevious'
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.useToggle,
         element: <UseToggle />,
+      },
+      {
+        path: PATH.usePrevious,
+        element: <UsePrevious />,
       },
     ],
   },
