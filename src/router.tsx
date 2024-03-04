@@ -9,6 +9,7 @@ import { UseToggle } from '@/page/UseToggle'
 import { UsePrevious } from '@/page/UsePrevious'
 import { UsePreferredLanguage } from '@/page/UsePreferredLanguage'
 import { UseFavicon } from '@/page/UseFavicon'
+import { UseCopyToClipboard } from '@/page/UseCopyToClipboard'
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.useFavicon,
         element: <UseFavicon />,
+      },
+      {
+        path: PATH.useCopyToClipboard,
+        element: <UseCopyToClipboard />,
       },
     ],
   },

@@ -6,4 +6,5 @@ export const PATH = {
   usePrevious: '/use-previous',
   usePreferredLanguage: '/use-preferred-language',
   useFavicon: 'use-favicon',
+  useCopyToClipboard: 'use-copy-to-clipboard',
 } as const
