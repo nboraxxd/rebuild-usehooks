@@ -4,6 +4,7 @@ import { PATH } from '@/constants/path'
 import { NotFound } from '@/page/NotFound'
 import { Homepage } from '@/page/Homepage'
 import { UseDocumentTitle } from '@/page/UseDocumentTitle'
+import { UseDefault } from '@/page/UseDefault'
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.useDocumentTitle,
         element: <UseDocumentTitle />,
+      },
+      {
+        path: PATH.useDefault,
+        element: <UseDefault />,
       },
     ],
   },
