@@ -6,7 +6,8 @@ import { Homepage } from '@/page/Homepage'
 import { UseDocumentTitle } from '@/page/UseDocumentTitle'
 import { UseDefault } from '@/page/UseDefault'
 import { UseToggle } from '@/page/UseToggle'
-import { UsePrevious } from './page/UsePrevious'
+import { UsePrevious } from '@/page/UsePrevious'
+import { UsePreferredLanguage } from '@/page/UsePreferredLanguage'
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.usePrevious,
         element: <UsePrevious />,
+      },
+      {
+        path: PATH.usePreferredLanguage,
+        element: <UsePreferredLanguage />,
       },
     ],
   },
