@@ -10,6 +10,7 @@ import { UsePrevious } from '@/page/UsePrevious'
 import { UsePreferredLanguage } from '@/page/UsePreferredLanguage'
 import { UseFavicon } from '@/page/UseFavicon'
 import { UseCopyToClipboard } from '@/page/UseCopyToClipboard'
+import { UseMediaQuery } from '@/page/UseMediaQuery'
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.useCopyToClipboard,
         element: <UseCopyToClipboard />,
+      },
+      {
+        path: PATH.useMediaQuery,
+        element: <UseMediaQuery />,
       },
     ],
   },
