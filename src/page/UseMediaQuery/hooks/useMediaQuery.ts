@@ -1,7 +1,7 @@
-import * as React from 'react'
+import { useCallback, useSyncExternalStore } from 'react'
 
 export default function useMediaQuery(query: string): boolean {
-  const subscribe = React.useCallback(
+  const subscribe = useCallback(
     (callback: () => void) => {
       const matchMedia = window.matchMedia(query)
 
@@ -21,5 +21,5 @@ export default function useMediaQuery(query: string): boolean {
     throw Error('useMediaQuery is a client-only hook')
   }
 
-  return React.useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
 }

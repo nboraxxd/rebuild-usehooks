@@ -11,6 +11,7 @@ import { UsePreferredLanguage } from '@/page/UsePreferredLanguage'
 import { UseFavicon } from '@/page/UseFavicon'
 import { UseCopyToClipboard } from '@/page/UseCopyToClipboard'
 import { UseMediaQuery } from '@/page/UseMediaQuery'
+import { UseWindowScroll } from '@/page/UseWindowScroll'
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.useMediaQuery,
         element: <UseMediaQuery />,
+      },
+      {
+        path: PATH.useWindowScroll,
+        element: <UseWindowScroll />,
       },
     ],
   },

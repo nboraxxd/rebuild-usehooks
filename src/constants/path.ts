@@ -8,4 +8,5 @@ export const PATH = {
   useFavicon: '/use-favicon',
   useCopyToClipboard: '/use-copy-to-clipboard',
   useMediaQuery: '/use-media-query',
+  useWindowScroll: '/use-window-scroll',
 } as const
